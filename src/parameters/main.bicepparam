@@ -3,15 +3,15 @@ using '../main.bicep'
 param networkSettings = {
   resourceGroup: {
     name: ''
-    location: 'eastus'
+    location: 'uksouth'
     tags: {}
   }
   resources: {
     virtualNetwork: {
       name: ''
-      addressPrefix: '172.168.0.0/16'
+      addressPrefix: '10.0.0.0/16'
       subnet: {
-        addressPrefix: '172.168.0.0/24'
+        addressPrefix: '10.0.0.0/24'
       }
     }
     securityGroup: {
@@ -23,7 +23,7 @@ param networkSettings = {
 param computeSettings = {
   resourceGroup: {
     name: ''
-    location: 'eastus'
+    location: 'uksouth'
     tags: {}
   }
   resources: {
@@ -38,7 +38,7 @@ param computeSettings = {
 param identitySettings = {
   resourceGroup: {
     name: ''
-    location: 'eastus'
+    location: 'uksouth'
     tags: {}
   }
   resources: {
@@ -51,7 +51,7 @@ param identitySettings = {
 param devcenterSettings = {
   resourceGroup: {
     name: ''
-    location: 'eastus'
+    location: 'uksouth'
     tags: {}
   }
   resources: {
