@@ -2,7 +2,7 @@ using '../main.bicep'
 
 param networkSettings = {
   resourceGroup: {
-    name: 'rg-devctr-eus01'
+    name: 'rg-devbox-vnet-eus01'
     location: 'eastus'
     tags: {}
   }
@@ -22,7 +22,7 @@ param networkSettings = {
 
 param computeSettings = {
   resourceGroup: {
-    name: 'rg-devctr-eus01'
+    name: 'rg-devbox-cpu-eus01'
     location: 'eastus'
     tags: {}
   }
@@ -37,7 +37,7 @@ param computeSettings = {
 
 param identitySettings = {
   resourceGroup: {
-    name: 'rg-devctr-eus01'
+    name: 'rg-devbox-id-eus01'
     location: 'eastus'
     tags: {}
   }
@@ -50,14 +50,14 @@ param identitySettings = {
 
 param devcenterSettings = {
   resourceGroup: {
-    name: 'rg-devctr-eus01'
+    name: 'rg-devbox-ctr-eus01'
     location: 'eastus'
     tags: {}
   }
   resources: {
     networkConnection: {
       name: 'eastus'
-      resourceGroup: 'rg-devctr-eus01'
+      resourceGroup: 'rg-devbox-nc-eus01'
     }
     devcenter: {
       name: 'devcenter'
