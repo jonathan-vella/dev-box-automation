@@ -5,7 +5,7 @@ targetScope = 'resourceGroup'
 // ---------
 
 // Managed Identity
-resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = {
+resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: settings.resources.managedIdentity.name
   location: settings.resourceGroup.location
 }
