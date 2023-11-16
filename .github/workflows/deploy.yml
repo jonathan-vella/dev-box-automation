@@ -33,6 +33,6 @@ jobs:
         run: |
           az deployment sub create \
             --name "GitHub.Actions" \
-            --location "uksouth" \
+            --location "eastus" \
             --template-file ./src/main.bicep \
             --parameters ./src/parameters/main.bicepparam
