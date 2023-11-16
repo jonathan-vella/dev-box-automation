@@ -2,28 +2,28 @@ using '../main.bicep'
 
 param networkSettings = {
   resourceGroup: {
-    name: 'rg-network'
-    location: 'uksouth'
+    name: 'rg-devctr-eus01'
+    location: 'eastus'
     tags: {}
   }
   resources: {
     virtualNetwork: {
       name: 'Microsoft.Network'
-      addressPrefix: '10.0.0.0/16'
+      addressPrefix: '172.168.0.0/16'
       subnet: {
-        addressPrefix: '10.0.0.0/24'
+        addressPrefix: '172.168.0.0/24'
       }
     }
     securityGroup: {
-      name: 'sg-devcenter'
+      name: 'nsg-devctr-eus01'
     }
   }
 }
 
 param computeSettings = {
   resourceGroup: {
-    name: 'rg-computer'
-    location: 'uksouth'
+    name: 'rg-devctr-eus01'
+    location: 'eastus'
     tags: {}
   }
   resources: {
@@ -37,8 +37,8 @@ param computeSettings = {
 
 param identitySettings = {
   resourceGroup: {
-    name: 'rg-identity'
-    location: 'uksouth'
+    name: 'rg-devctr-eus01'
+    location: 'eastus'
     tags: {}
   }
   resources: {
@@ -50,14 +50,14 @@ param identitySettings = {
 
 param devcenterSettings = {
   resourceGroup: {
-    name: 'rg-devcenter'
-    location: 'uksouth'
+    name: 'rg-devctr-eus01'
+    location: 'eastus'
     tags: {}
   }
   resources: {
     networkConnection: {
-      name: 'uksouth'
-      resourceGroup: 'rg-networkconnection'
+      name: 'eastus'
+      resourceGroup: 'rg-devctr-eus01'
     }
     devcenter: {
       name: 'devcenter'
@@ -65,12 +65,12 @@ param devcenterSettings = {
     definitions: [
       {
         name: 'standard'
-        image: 'win-11-ent-22h2-os'
+        image: 'win-11-ent-23h2-os'
         sku: '8-vcpu-32gb-ram-256-ssd'
       }
       {
         name: 'office'
-        image: 'win-11-ent-22h2-m365'
+        image: 'win-11-ent-23h2-m365'
         sku: '8-vcpu-32gb-ram-256-ssd'
       }
       {
