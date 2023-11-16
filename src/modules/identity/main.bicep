@@ -1,3 +1,7 @@
+// ------
+// Scopes
+// ------
+
 targetScope = 'resourceGroup'
 
 // ---------
