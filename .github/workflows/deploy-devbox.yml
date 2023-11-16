@@ -2,12 +2,12 @@ name: 'Bicep Whatif / Deploy'
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - main
-  pull_request:
-    branches:
-    - main
+  # push:
+  #   branches:
+  #   - main
+  # pull_request:
+  #   branches:
+  #   - main
 
 #Special permissions required for OIDC authentication
 permissions:
@@ -61,6 +61,7 @@ jobs:
           az deployment sub what-if \
             --name whatif-${{ github.run_id }} \
             --template-file src/main.bicep \
+            --parameters ./src/parameters/main.bicepparam \
             --location $LOCATION > whatif
             
       # Create string output of Whatif
@@ -102,7 +103,6 @@ jobs:
     #TODO can we easily determine if there are any changes to deploy?
     if: github.ref == 'refs/heads/main' 
     runs-on: ubuntu-latest
-    environment: production
     needs: [bicep-whatif]
     
     steps:
