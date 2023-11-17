@@ -86,17 +86,17 @@ param devcenterSettings = {
         pools: [
           {
             name: 'standard'
-            definition: ''
+            definition: 'standard'
             administrator: 'Enabled'
           }
           {
             name: 'office'
-            definition: ''
+            definition: 'office'
             administrator: 'Enabled'
           }
           {
             name: 'developer'
-            definition: ''
+            definition: 'developer'
             administrator: 'Enabled'
           }
         ]
