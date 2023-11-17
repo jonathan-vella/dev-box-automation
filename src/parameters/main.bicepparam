@@ -65,12 +65,12 @@ param devcenterSettings = {
     definitions: [
       {
         name: 'standard'
-        image: 'win-11-ent-23h2-os'
+        image: 'win-11-ent-22h2-os'
         sku: '8-vcpu-32gb-ram-256-ssd'
       }
       {
         name: 'office'
-        image: 'win-11-ent-23h2-m365'
+        image: 'win-11-ent-22h2-m365'
         sku: '8-vcpu-32gb-ram-256-ssd'
       }
       {
