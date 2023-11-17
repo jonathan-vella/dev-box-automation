@@ -8,7 +8,7 @@ param networkSettings = {
   }
   resources: {
     virtualNetwork: {
-      name: 'Microsoft.Network'
+      name: 'vnet-devctr-eus01'
       addressPrefix: '172.168.0.0/16'
       subnet: {
         addressPrefix: '172.168.0.0/24'
@@ -43,7 +43,7 @@ param identitySettings = {
   }
   resources: {
     managedIdentity: {
-      name: 'mi-devcenter'
+      name: 'mi-devbox-eus01'
     }
   }
 }
@@ -56,7 +56,7 @@ param devcenterSettings = {
   }
   resources: {
     networkConnection: {
-      name: 'eastus'
+      name: 'nc-eus01'
       resourceGroup: 'rg-devbox-nc-eus01'
     }
     devcenter: {
