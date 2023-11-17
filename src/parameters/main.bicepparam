@@ -60,7 +60,7 @@ param devcenterSettings = {
       resourceGroup: 'rg-devbox-nc-eus01'
     }
     devcenter: {
-      name: 'devcenter'
+      name: 'devc-eus01'
     }
     definitions: [
       {
