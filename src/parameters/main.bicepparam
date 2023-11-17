@@ -56,7 +56,7 @@ param devcenterSettings = {
   }
   resources: {
     networkConnection: {
-      name: 'nc-eus01'
+      name: 'default'
       resourceGroup: 'rg-devbox-devc-eus01'
     }
     devcenter: {
