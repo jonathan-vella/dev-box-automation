@@ -50,7 +50,7 @@ param identitySettings = {
 
 param devcenterSettings = {
   resourceGroup: {
-    name: 'rg-devbox-ctr-eus01'
+    name: 'rg-devbox-devc-eus01'
     location: 'eastus'
     tags: {}
   }
