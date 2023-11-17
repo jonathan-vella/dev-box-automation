@@ -1,4 +1,4 @@
-name: 'Bicep Whatif / Deploy'
+name: 'Validate Bicep and deploy Dev Box'
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ env:
 
 jobs:
   bicep-whatif:
-    name: 'Bicep Whatif'
+    name: 'Bicep Validation'
     runs-on: ubuntu-latest
 
     steps:
@@ -99,7 +99,7 @@ jobs:
             })
             
   bicep-deploy:
-    name: 'Bicep Deploy'
+    name: 'Deploy Dev Box'
     #TODO can we easily determine if there are any changes to deploy?
     if: github.ref == 'refs/heads/main' 
     runs-on: ubuntu-latest
